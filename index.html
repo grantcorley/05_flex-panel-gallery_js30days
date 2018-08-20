@@ -84,6 +84,11 @@
       flex: 5;
       font-size:40px;
     }
+
+    .red{
+      border:2px solid red;
+    }
+
   </style>
 
 
@@ -118,6 +123,19 @@
   </div>
 
   <script>
+
+    const panels = document.querySelectorAll('.panel');
+    
+    function toggleOpen(){
+      console.log('toggleOpen()')
+      this.classList.toggle('open');
+    }
+
+
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+
+
+
   </script>
 
 
